@@ -17,7 +17,7 @@
 
                         <div class="row">
                             <div class="col mx-auto" >
-                               <center>
+                               <center> 
                                   <h3>Admin Login</h3>
                                </center>
                             </div>
