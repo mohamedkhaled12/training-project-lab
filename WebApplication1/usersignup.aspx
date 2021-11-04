@@ -108,7 +108,7 @@
                             <div class="col-md-4" >
                                <label>Pincode</label>
                                <div class="form-group">
-                                   <asp:TextBox class="form-control" ID="TextBox7" runat="server" placeholder="pincode" TextMode="Email"></asp:TextBox>
+                                   <asp:TextBox class="form-control" ID="TextBox7" runat="server" placeholder="pincode" TextMode="Number"></asp:TextBox>
                                </div>
                             </div>
                         </div>
@@ -132,7 +132,7 @@
 
                          <div class="row">
                             <div class="col-md-6" >
-                               <label>User ID</label>
+                               <label>Member ID</label>
                                <div class="form-group">
                                    <asp:TextBox class="form-control" ID="TextBox8" runat="server" placeholder="User ID"></asp:TextBox>
                                </div>
@@ -150,7 +150,7 @@
                         <div class="row">
                             <div class="col" >
                                 <div class="form-group">
-                                     <asp:Button CssClass="btn-btn-primary btn-block btn-lg" ID="Button1" runat="server" Text="Sign Up" />
+                                     <asp:Button CssClass="btn-btn-primary btn-block btn-lg" ID="Button1" runat="server" Text="Sign Up" OnClick="Button1_Click" />
                                </div>  
                                </div>
 

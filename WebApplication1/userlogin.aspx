@@ -52,7 +52,7 @@
                                </div>
 
                                  <div class="form-group">
-                                     <asp:Button CssClass="btn-btn-primary btn-block btn-lg" ID="Button1" runat="server" Text="Login" />
+                                     <asp:Button CssClass="btn-btn-primary btn-block btn-lg" ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
                                </div>
 
                                 <div class="form-group">
