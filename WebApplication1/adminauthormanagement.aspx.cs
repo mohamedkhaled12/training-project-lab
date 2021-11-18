@@ -15,6 +15,7 @@ namespace WebApplication1
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
+            GridView1.DataBind();
 
         }
         //add button
@@ -58,7 +59,7 @@ namespace WebApplication1
         //go button
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            getAuthorByID();
         }
 
         bool checkIfAuthorExists()
@@ -163,7 +164,7 @@ namespace WebApplication1
                 con.Close();
                 Response.Write("<script>alert('Author Deleted Successfully');</script>");
                 clearForm();
-               // GridView1.DataBind();
+               GridView1.DataBind();
 
             }
             catch (Exception ex)
@@ -176,6 +177,39 @@ namespace WebApplication1
         {
             TextBox1.Text = "";
             TextBox2.Text = "";
+        }
+
+        void getAuthorByID()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand("SELECT * from auhtor_master_tbl where author_id='" + TextBox1.Text.Trim() + "';", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count >= 1)
+                {
+                    TextBox2.Text = dt.Rows[0][1].ToString();
+                }
+                else
+                {
+                    Response.Write("<script>alert('Invalid Author ID');</script>");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+
+            }
         }
 
     }
