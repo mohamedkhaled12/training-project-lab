@@ -20,8 +20,8 @@
     <script src="bootstrap/js/popper.min.js"></script>
     <%--bootstrap js--%>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-     <%--datatables js--%>
-    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--datatables js--%>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -80,7 +80,7 @@
                         </li>
 
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton5" runat="server" Visible="False">
+                            <asp:LinkButton class="nav-link" ID="LinkButton5" runat="server" Visible="False" OnClick="LinkButton5_Click">
                                 Hello User
                             </asp:LinkButton>
                         </li>
@@ -132,5 +132,6 @@
         <!-- ./Footer -->
        
     </form>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
 </body>
 </html>

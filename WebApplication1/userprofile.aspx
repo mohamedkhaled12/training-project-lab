@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="userprofile.aspx.cs" Inherits="WebApplication1.userprofile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -160,7 +161,7 @@
                         <div class="row">
                             <div class="col-8 mx-auto" >
                                 <div class="form-group">
-                                     <asp:Button CssClass="btn-btn-primary btn-block btn-lg" ID="Button1" runat="server" Text="Update" />
+                                     <asp:Button CssClass="btn-btn-primary btn-block btn-lg" ID="Button1" runat="server" Text="Update" OnClick="Button1_Click" />
                                </div>  
                                </div>
 
@@ -201,7 +202,7 @@
 
                          <div class="row">
                             <div class="col" >
-                                <asp:GridView class="table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
+                                <asp:GridView class=" table table-striped table-bordered" ID="GridView1" runat="server" Width="976px"></asp:GridView>
                             </div>
                         </div>
 

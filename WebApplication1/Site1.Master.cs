@@ -137,5 +137,11 @@ namespace WebApplication1
             LinkButton9.Visible = false; // book issuing link button
             LinkButton10.Visible = false; // member management link button
         }
+        //view profile
+
+        protected void LinkButton5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("userprofile.aspx");
+        }
     }
 }
